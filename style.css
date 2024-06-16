@@ -1,0 +1,60 @@
+@import url('https://fonts.googleapis.com/css2?family=Metal+Mania&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Metal Mania", system-ui;
+    font-weight: 400;
+    font-style: normal;
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+    background-color: #000000;
+    color: #FFFFFF;
+    letter-spacing: 0.1em;
+}
+
+.container {
+    max-width: 600px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 8rem;
+}
+
+.image-logo {
+    width: 55%;
+}
+
+.lyric-container {
+    font-size: 32px;
+    text-align: center;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+#lyric-text {
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+#lyric-text span {
+    opacity: 0;
+    animation: opacityLetter 0.5s forwards;
+}
+
+@keyframes opacityLetter {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
